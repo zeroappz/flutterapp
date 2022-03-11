@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class SplashScreen extends StatefulWidget {
   final String title;
 
-  const SplashScreen({Key? key, required this.title}) : super(key: key);
+  SplashScreen({Key? key, required this.title}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -16,7 +16,7 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   // constructor to load initially
   _SplashScreenState() {
-    Timer(const Duration(milliseconds: 5000), () {
+    Timer(Duration(milliseconds: 5000), () {
       setState(() {
         // Navigator.of(context).pushReplacementNamed('/home');
         // Navigator.push(SpashScreen());

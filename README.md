@@ -33,3 +33,20 @@ It is the widget that can not be modified or manipulated at any cost and act as 
     - returning Widget design
 
 
+## Classes that we used
+Any class will have a child object to proceed with
+   - SingleChildScrollView - to make a page scrollable one
+   - Scaffold - Becomes the root object for any page 
+      - appbar, body, bottomnavigation
+   - ClipOval - to create oval shaped object
+   - Row: Children[], mainAxis - horizontal & crossAxis
+   - Column: Children[], mainAxis - vertical & crossAxis - horizontal
+   - MediaQuery : It will analyze the screen size (16:9, 20:9, 18:9)
+   - SafeArea - Instance to handle the device notch
+   - EdgeInsets - all(), only(), LTRB(): padding & margin
+   - TextFormField - controller to collect the form data & design
+   - InputDecoration - design pattern for the form class
+   - Boxdecoration - design pattern class for the container
+   - showSnackBar() - Provide the pop up alert on the screen
+   - TextSpan() - chldren objects, more than one text objects can be created
+   - Text() - single text string object can be added

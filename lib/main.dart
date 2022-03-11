@@ -1,3 +1,5 @@
+import 'package:dealsapp/pages/loginscreen.dart';
+
 import '../pages/splashscreen.dart';
 import 'package:flutter/material.dart'; // building android layout
 // import 'package:flutter/cupertino.dart'; // for ios layout
@@ -26,7 +28,8 @@ class MyApp extends StatelessWidget {
           primarySwatch: Colors.blue,
           scaffoldBackgroundColor: Colors.grey.shade100),
       debugShowCheckedModeBanner: true,
-      home: SplashScreen(title: "Deals App"),
+      // home: SplashScreen(title: "Deals App"),
+      home: LoginScreen(),
     );
   }
 }
