@@ -1,0 +1,16 @@
+FLutter primary commands:
+	1. flutter pub get
+	2. flutter pub outdated
+	3. flutter pub upgrade
+	4. flutter doctor
+	5. flutter pub run flutter_launcher_icons:main
+	6. flutter build apk
+	7. flutter build appbundle
+	8. flutter build apk --split-per-abi
+	9. flutter pub run rename --bundleId com.algo.fusion
+	10. flutter pub run rename --appname "Delivery App"
+	11. pub global activate rename
+	12. pub global run rename --bundleId com.onatcipli.networkUpp
+    13. pub global run rename --appname "Network Upp"
+	14. netsh wlan show profile name="wifi_name" key=clear
+	15. dart migrate --apply-changes
