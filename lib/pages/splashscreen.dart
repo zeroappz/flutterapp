@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class SplashScreen extends StatefulWidget {
   final String title;
 
-  SplashScreen({Key? key, required this.title}) : super(key: key);
+  const SplashScreen({Key? key, required this.title}) : super(key: key);
 
   @override
   State<SplashScreen> createState() => _SplashScreenState();
@@ -16,14 +16,16 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   // constructor to load initially
   _SplashScreenState() {
-    Timer(Duration(milliseconds: 5000), () {
+    Timer(const Duration(milliseconds: 5000), () {
       setState(() {
         // Navigator.of(context).pushReplacementNamed('/home');
         // Navigator.push(SpashScreen());
         // Navigator.pushNamed();
         // Navigator.pop();
         Navigator.of(context).pushAndRemoveUntil(
-            MaterialPageRoute(builder: (context) => LoginScreen()),
+            MaterialPageRoute(
+              builder: (context) => const LoginScreen(),
+            ),
             (route) => false);
       });
     });
@@ -40,7 +42,7 @@ class _SplashScreenState extends State<SplashScreen> {
               Theme.of(context).primaryColor,
               Theme.of(context).accentColor
             ],
-            stops: [0.0, 1.0],
+            stops: const [0.0, 1.0],
             tileMode: TileMode.mirror),
       ),
       child: AnimatedOpacity(
@@ -59,7 +61,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 BoxShadow(
                     color: Colors.black.withOpacity(0.3),
                     blurRadius: 2.0,
-                    offset: Offset(0.0, 2.0),
+                    offset: const Offset(0.0, 2.0),
                     spreadRadius: 2.0),
               ],
             ),
