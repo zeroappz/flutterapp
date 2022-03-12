@@ -46,7 +46,8 @@ Any class will have a child object to proceed with
    - EdgeInsets - all(), only(), LTRB(): padding & margin
    - TextFormField - controller to collect the form data & design
    - InputDecoration - design pattern for the form class
-   - Boxdecoration - design pattern class for the container
+   - BoxDecoration - design pattern class for the container
    - showSnackBar() - Provide the pop up alert on the screen
    - TextSpan() - chldren objects, more than one text objects can be created
    - Text() - single text string object can be added
+   - 

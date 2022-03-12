@@ -1,0 +1,37 @@
+Regular Expression
+
+'' =>
+String name = 'Praveen';
+int = name.length = 7
+bool = name.startsWith('P')
+
+// ipaddress
+// url
+// email
+// String pn = "9047048344"
+if(ph.startswith('6') || ph.startswith('7') || ph.startswith('8') ||ph.startswith('9'))
+
+
+Regex validation (classes):
+    bool match("9047048a$%", "..........") ==> if(){} 
+
+    bool match("9047048344", "[6789][0-9]{9}") ==> if(){}
+
+    1. Meta Character classes - {}
+    2. Character Class
+    3. Quantifier Class - {n}, {m, n}, {m, }
+
+Character Class:
+    '..........' : this can match any value (alphabets, special, numerics)
+    "[a-z | 0-9 | A-Z | _\.\\ \| ]" == "a"
+    
+    "C:\User\Desktop"
+    "C:\\User\\Dsektop"
+
+    "[6789][0-9]{9}" == "9047048344"
+
+    "[a-zA-Z0-9$%^&_]{8, 16}" "Restricted$&10"
+
+    "([a-zA-Z]{5}[0-9]{4}[a-zA-Z])" == "DOQPP4009Q"
+
+    "0x[a-f|A-Z|0-9]{4}" == "0x0C36"

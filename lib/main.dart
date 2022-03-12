@@ -1,6 +1,8 @@
-import 'package:dealsapp/pages/loginscreen.dart';
+import 'package:dealsapp/pages/forgotpassword.dart';
+import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/pages/registration.dart';
 
-// import '../pages/splashscreen.dart';
+import 'pages/splash.dart';
 import 'package:flutter/material.dart'; // building android layout
 // import 'package:flutter/cupertino.dart'; // for ios layout
 import 'package:hexcolor/hexcolor.dart';
@@ -29,8 +31,10 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: _accentColor,
       ),
       debugShowCheckedModeBanner: true,
-      // home: SplashScreen(title: "Deals App"),
+      // home: const SplashScreen(title: "Deals App"),
       home: const LoginScreen(),
+      // home: const ForgotPasswordScreen(),
+      // home: const RegistrationScreen(),
     );
   }
 }

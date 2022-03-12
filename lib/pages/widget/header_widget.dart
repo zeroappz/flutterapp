@@ -34,13 +34,14 @@ class _HeaderWidgetState extends State<HeaderWidget> {
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                     colors: [
-                      Theme.of(context).primaryColor.withOpacity(0.4),
+                    Theme.of(context).primaryColor.withOpacity(1.0),
                       Theme.of(context).accentColor.withOpacity(0.7),
                     ],
                     begin: const FractionalOffset(0.0, 0.0),
                     end: const FractionalOffset(1.0, 0.0),
                     stops: const [0.0, 1.0],
-                    tileMode: TileMode.clamp),
+                  tileMode: TileMode.clamp,
+                ),
               ),
             ),
             clipper: ShapeClipper([
@@ -137,15 +138,17 @@ class ShapeClipper extends CustomClipper<Path> {
   Path getClip(Size size) {
     var path = Path();
 
-    path.lineTo(0.0, size.height - 20);
-
-    // path.quadraticBezierTo(size.width/5, size.height, size.width/2, size.height-40);
-    // path.quadraticBezierTo(size.width/5*4, size.height-80, size.width, size.height-20);
+    path.lineTo(0.0, size.height - 80);
 
     path.quadraticBezierTo(
-        _offsets[0].dx, _offsets[0].dy, _offsets[1].dx, _offsets[1].dy);
+        size.width / 5, size.height, size.width / 2, size.height - 40);
     path.quadraticBezierTo(
-        _offsets[2].dx, _offsets[2].dy, _offsets[3].dx, _offsets[3].dy);
+        size.width / 5 * 4, size.height - 80, size.width, size.height - 20);
+
+    // path.quadraticBezierTo(
+    //     _offsets[0].dx, _offsets[0].dy, _offsets[1].dx, _offsets[1].dy);
+    // path.quadraticBezierTo(
+    //     _offsets[2].dx, _offsets[2].dy, _offsets[3].dx, _offsets[3].dy);
 
     // path.lineTo(size.width, size.height-20);
     path.lineTo(size.width, 0.0);

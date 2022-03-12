@@ -1,6 +1,6 @@
 import 'dart:async';
 // import 'loginscreen.dart';
-import 'package:dealsapp/pages/loginscreen.dart';
+import 'package:dealsapp/pages/login.dart';
 import 'package:flutter/material.dart';
 
 // Stateful widget

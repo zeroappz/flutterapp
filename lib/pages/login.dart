@@ -1,4 +1,5 @@
-import 'package:dealsapp/pages/splashscreen.dart';
+import 'package:dealsapp/pages/registration.dart';
+import 'package:dealsapp/pages/forgotpassword.dart';
 import 'package:dealsapp/pages/widget/header_widget.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -53,7 +54,7 @@ class _LoginScreenState extends State<LoginScreen> {
             children: [
               Container(
                 height: 200.0,
-                child: const HeaderWidget(200.0, true, Icons.credit_card),
+                child: const HeaderWidget(200.0, false, Icons.credit_card),
               ),
               const SizedBox(
                 height: 20.0,
@@ -153,7 +154,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            SplashScreen(title: 'Deals'),
+                                            const ForgotPasswordScreen(),
                                       ),
                                     );
                                   },
@@ -220,9 +221,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    const SplashScreen(
-                                                  title: 'Sign Up',
-                                                ),
+                                                    const RegistrationScreen(),
                                               ),
                                             );
                                           },
