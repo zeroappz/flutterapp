@@ -50,4 +50,5 @@ Any class will have a child object to proceed with
    - showSnackBar() - Provide the pop up alert on the screen
    - TextSpan() - chldren objects, more than one text objects can be created
    - Text() - single text string object can be added
-   - 
+   - TextSpan - to add more text objects and make any text as actionable usinge TapGesture
+   - Padding - common Padding object for any child that we create

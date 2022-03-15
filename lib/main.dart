@@ -1,5 +1,7 @@
 import 'package:dealsapp/pages/forgotpassword.dart';
+import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
 
 import 'pages/splash.dart';
@@ -32,9 +34,11 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: true,
       // home: const SplashScreen(title: "Deals App"),
-      home: const LoginScreen(),
+      // home: const LoginScreen(),
       // home: const ForgotPasswordScreen(),
       // home: const RegistrationScreen(),
+      // home: const OTPVerificationScreen(),
+      home: const HomeScreen(),
     );
   }
 }
