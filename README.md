@@ -39,6 +39,7 @@ Any class will have a child object to proceed with
    - Scaffold - Becomes the root object for any page 
       - appbar, body, bottomnavigation
    - ClipOval - to create oval shaped object
+   - ClipRRect - rectangle object
    - Row: Children[], mainAxis - horizontal & crossAxis
    - Column: Children[], mainAxis - vertical & crossAxis - horizontal
    - MediaQuery : It will analyze the screen size (16:9, 20:9, 18:9)
@@ -52,3 +53,11 @@ Any class will have a child object to proceed with
    - Text() - single text string object can be added
    - TextSpan - to add more text objects and make any text as actionable usinge TapGesture
    - Padding - common Padding object for any child that we create
+   - Drawer - that helps to provide the side bar navigation
+         - UserAccountDetails
+         - ListView: ListTile(icon, text, navigation)
+   - BottomNavigationBar - creates the bottom navigation
+         - Items (BottomNavigationBarItem)
+   - Carousel - creates list of sliding banners
+   - AssetImage: Loads the local assets or loads iwithout internet
+   - NetworkImages: load form the live URL
