@@ -56,3 +56,33 @@ class GlobalWidget {
     );
   }
 }
+
+
+
+class FullScreenImageView extends StatelessWidget {
+  final String imageUrl;
+  final String heroTag;
+
+  const FullScreenImageView(this.imageUrl, this.heroTag);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black87,
+      body:  GestureDetector(
+        onTap: () {
+          Navigator.pop(context);
+        },
+        child: Center(child: Hero(
+            tag: heroTag,
+            child: Image.network(
+              imageUrl,
+              fit: BoxFit.contain,
+              width: MediaQuery.of(context).size.width,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

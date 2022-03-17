@@ -1,5 +1,15 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:dealsapp/commonwidget/global_widget.dart';
+// import 'package:dealsapp/values/sizes.dart';
+// import 'package:dealsapp/values/strings.dart';
+// import 'package:dealsapp/values/colors.dart';
+// import 'package:dealsapp/values/images_path.dart';
+// import 'package:dealsapp/values/styles.dart';
+
+import 'package:dealsapp/values/values.dart';
+
+
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -13,7 +23,7 @@ class _HomeScreenState extends State<HomeScreen> {
   // final _formKey = GlobalKey<FormState>();
   int selectedIndex = 0;
   int carouselIndex = 0;
-
+  int carouselSliderIndex = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +31,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         title: const Text(
-          'Dashboard',
+          StringConstant.DASHBOARD,
           style: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.bold,
@@ -252,11 +262,32 @@ class _HomeScreenState extends State<HomeScreen> {
               pageSnapping: true,
               onPageChanged: (index, reason) {
                 setState(() {
-                  carouselIndex = index;
+                  carouselSliderIndex = index;
                 });
               },
             ),
           ),
+          const SizedBox(height: Sizes.HEIGHT_10),
+
+          // load an image and view it as a full screen on click of that image
+          GestureDetector(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const FullScreenImageView(
+                    Images.liveUrl,
+                    StringConstant.IMG_TAG,
+                  ),
+                ),
+              );
+            },
+            child: Hero(
+              child: ClipRect(child: Image.network(Images.liveUrl)),
+              tag: StringConstant.IMG_TAG,
+            ),
+          ),
+
         ],
       ),
     );

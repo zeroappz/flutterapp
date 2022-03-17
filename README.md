@@ -61,3 +61,10 @@ Any class will have a child object to proceed with
    - Carousel - creates list of sliding banners
    - AssetImage: Loads the local assets or loads iwithout internet
    - NetworkImages: load form the live URL
+   - GridView.builder() to create list of images with even screen splitup to provide the gallery view
+   - SliverGridDelegateWithFixedCrossAxisCount fixed cross axis
+
+
+## Library
+      - To make any folder as a library we should provide (part of library;) in each file.
+      - in the library file (values.dart in our case), we must include (library values)
