@@ -58,10 +58,10 @@ samples, guidance on mobile development, and a full API reference.
       - c Clear the screen
       - q Quit (terminate the application on the device).
 
-## StatelessWidget
+# StatelessWidget
 
 
-# It is the widget that can not be modified or manipulated at any cost and act as a common widget throughout the application
+## It is the widget that can not be modified or manipulated at any cost and act as a common widget throughout the application
       - Widget build(BuildContext context) {} - build is an function that paints the design or logic based on dart for flutter app
             - returning Widget design
 
@@ -107,19 +107,19 @@ samples, guidance on mobile development, and a full API reference.
       - flutter run
       - flutter build
       - flutter pub get
-	- flutter pub outdated
-	- flutter pub upgrade
-	- flutter doctor
-	- flutter pub run flutter_launcher_icons:main
-	- flutter build apk
-	- flutter build appbundle
-	- flutter build apk --split-per-abi
-	- flutter pub run rename --bundleId com.algo.fusion
-	- flutter pub run rename --appname "Delivery App"
-	- pub global activate rename
-	- pub global run rename --bundleId com.onatcipli.networkUpp
+      - flutter pub outdated
+      - flutter pub upgrade
+      - flutter doctor
+      - flutter pub run flutter_launcher_icons:main
+      - flutter build apk
+      - flutter build appbundle
+      - flutter build apk --split-per-abi
+      - flutter pub run rename --bundleId com.algo.fusion
+      - flutter pub run rename --appname "Delivery App"
+      - pub global activate rename
+      - pub global run rename --bundleId com.onatcipli.networkUpp
       - pub global run rename --appname "Network Upp"
-	- dart migrate --apply-changes
+      - dart migrate --apply-changes
 
 
 ## KeyTool and Chain:
@@ -135,9 +135,9 @@ samples, guidance on mobile development, and a full API reference.
 	- keytool -exportcert -v -alias androiddebugkey -keystore %USERPROFILE%/.android/debug.keystore (encrypted)
 	
 	- keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%/.android/debug.keystore (readable)
-## Application Flow from End-to-End
+# Application Flow from End-to-End
 
-# We follow the factors which qualify to be a benchmark in evaluating application development approaches with some of the potential criteria listed below: 
+## We follow the factors which qualify to be a benchmark in evaluating application development approaches with some of the potential criteria listed below: 
       - UI: Look and feel
       - Cross-Platform Framework : Mobile OS platform support
       - Leveraging device capabilities
