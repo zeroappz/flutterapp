@@ -61,13 +61,13 @@ samples, guidance on mobile development, and a full API reference.
 ## StatelessWidget
 
 
-It is the widget that can not be modified or manipulated at any cost and act as a common widget throughout the application
+# It is the widget that can not be modified or manipulated at any cost and act as a common widget throughout the application
       - Widget build(BuildContext context) {} - build is an function that paints the design or logic based on dart for flutter app
             - returning Widget design
 
 
 ## Classes that we used
-Any class will have a child object to proceed with
+# Any class will have a child object to proceed with
       - SingleChildScrollView : to make a page scrollable one
       - Scaffold : Becomes the root object for any page 
       - appbar, body, bottomnavigation
@@ -137,7 +137,7 @@ Any class will have a child object to proceed with
 	- keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%/.android/debug.keystore (readable)
 ## Application Flow from End-to-End
 
-We follow the factors which qualify to be a benchmark in evaluating application development approaches with some of the potential criteria listed below: 
+# We follow the factors which qualify to be a benchmark in evaluating application development approaches with some of the potential criteria listed below: 
       - UI: Look and feel
       - Cross-Platform Framework : Mobile OS platform support
       - Leveraging device capabilities
