@@ -1,6 +1,6 @@
-# dealsapp
+# Flutter Application
 
-A new Flutter project.
+A new Flutter project with detailed explanation about the concepts within 45 hours.
 
 ## Getting Started
 
