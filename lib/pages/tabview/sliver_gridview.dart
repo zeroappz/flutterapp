@@ -8,45 +8,43 @@ class SliverGridView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var _imgList = Images.networkImgList;
-    return GridView.builder(
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 4,
-        childAspectRatio: 1.0,
-        crossAxisSpacing: 10.0,
-        mainAxisSpacing: 10.0,
-      ),
-      itemCount: _imgList.length,
-      itemBuilder: (context, index) {
-        return Container(
-          // decoration: BoxDecoration(
-          //   borderRadius: BorderRadius.circular(Sizes.RADIUS_0),
-          //   image: DecorationImage(
-          //     image: NetworkImage(_imgList[index]),
-          //     fit: BoxFit.cover,
-          //   ),
-          // ),
-          height: Sizes.HEIGHT_10 * 10,
-          margin: const EdgeInsets.only(top: 10.0),
-          color: Colors.grey,
-          child: GestureDetector(
-            onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => FullScreenImageView(
-                    _imgList[index],
-                    StringConstant.IMG_TAG + '_' + index.toString(),
+    return CustomScrollView(
+      slivers: [
+        SliverGrid(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 3,
+            mainAxisSpacing: 10.0,
+            crossAxisSpacing: 5.0,
+            childAspectRatio: 1.0,
+          ),
+          delegate: SliverChildBuilderDelegate(
+            (context, index) {
+              return GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => FullScreenImageView(
+                        _imgList[index],
+                        StringConstant.IMG_TAG + '_' + index.toString(),
+                      ),
+                    ),
+                  );
+                },
+                child: ClipRRect(
+                  child: Image(
+                    image: NetworkImage(_imgList[index]),
+                    height: double.infinity,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
                   ),
                 ),
               );
             },
-            child: Image(
-              image: NetworkImage(_imgList[index]),
-              fit: BoxFit.cover,
-            ),
+            childCount: _imgList.length,
           ),
-        );
-      },
+        ),
+      ],
     );
   }
 }

@@ -22,6 +22,8 @@ class StringConstant {
   static const String CONTACT_US = 'Contact Us';
   static const String FAQ = 'FAQ';
   static const String FEEDBACK = 'Feedback';
+  static const String SEARCH = 'Search';
+  static const String FAVORITE = 'Favorite';
   static const String REVIEW = 'Review';
   static const String RATE_APP = 'Rate App';
   static const String SHARE = 'Share';

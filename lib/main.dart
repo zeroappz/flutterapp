@@ -4,6 +4,7 @@ import 'package:dealsapp/pages/login.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
 import 'package:dealsapp/pages/tabview/tab_home.dart';
+import 'package:dealsapp/pages/widget/gesture_detector.dart';
 
 import 'pages/splash.dart';
 import 'package:flutter/material.dart'; // building android layout
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
       // home: const RegistrationScreen(),
       // home: const OTPVerificationScreen(),
         // home: const HomeScreen(),
-        home: const HomeTabBar()
+        // home: const HomeTabBar()
+        home: const CardGestureWidget()
     );
   }
 }

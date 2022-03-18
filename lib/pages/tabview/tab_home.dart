@@ -3,6 +3,7 @@ import 'package:dealsapp/pages/tabview/general_gridview.dart';
 import 'package:dealsapp/pages/tabview/sliver_gridview.dart';
 import 'package:dealsapp/values/values.dart';
 import 'package:flutter/material.dart';
+import 'package:google_nav_bar/google_nav_bar.dart';
 
 class HomeTabBar extends StatefulWidget {
   const HomeTabBar({
@@ -17,7 +18,9 @@ class _HomeTabBarState extends State<HomeTabBar> {
   bool _generalTabActive = true;
   bool _dynamicTabActive = false;
   bool _sliverTabActive = false;
-
+  int _selectedIndex = 0;
+  
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,6 +32,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
+      
       body: Column(
         children: [
           Expanded(
@@ -183,6 +187,56 @@ class _HomeTabBarState extends State<HomeTabBar> {
                             : null),
           ),
         ],
+      ),
+      bottomNavigationBar: Container(
+        decoration: const BoxDecoration(
+          color: Colors.white,
+          // borderRadius: BorderRadius.only(
+          //   topLeft: Radius.circular(Sizes.RADIUS_0),
+          //   topRight: Radius.circular(Sizes.RADIUS_0),
+          // ),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black12,
+              blurRadius: Sizes.SIZE_16,
+              spreadRadius: Sizes.SIZE_0,
+              offset: Offset(Sizes.SIZE_0, Sizes.SIZE_0),
+            ),
+          ],
+        ),
+        child: SafeArea(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+              horizontal: Sizes.SIZE_16,
+              vertical: Sizes.SIZE_8,
+            ),
+            child: GNav(
+              hoverColor: Colors.grey[100]!,
+              activeColor: Colors.redAccent,
+              gap: Sizes.SIZE_8,
+              padding: const EdgeInsets.symmetric(
+                horizontal: Sizes.SIZE_16,
+                vertical: Sizes.SIZE_8,
+              ),
+              duration: const Duration(milliseconds: 400),
+              tabBackgroundColor: Colors.grey[100]!,
+              rippleColor: Colors.grey[300]!,
+              iconSize: Sizes.ICON_SIZE_24,
+              tabs: const [
+                GButton(icon: Icons.home, text: StringConstant.HOME),
+                GButton(icon: Icons.search, text: StringConstant.SEARCH),
+                GButton(icon: Icons.favorite, text: StringConstant.FAVORITE),
+                GButton(icon: Icons.person, text: StringConstant.PROFILE),
+              ],
+              selectedIndex: _selectedIndex,
+              onTabChange: (index) {
+                setState(() {
+                  _selectedIndex = index;
+                });
+              },
+            ),
+          ),
+        ),
       ),
     );
   }

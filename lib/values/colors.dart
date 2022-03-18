@@ -1,5 +1,7 @@
 part of values;
-class ColrConstant {
+class ColorConstants {
+
+  // primary colors
   static const int blue = 0xFF0000FF;
   static const int red = 0xFFFF0000;
   static const int green = 0xFF00FF00;
@@ -13,6 +15,8 @@ class ColrConstant {
   static const int black = 0xFF000000;
   static const int white = 0xFFFFFFFF;
   static const int transparent = 0x00000000;
+  
+  // light colors
   static const int lightBlue = 0xFFADD8E6;
   static const int lightRed = 0xFFFFE4E1;
   static const int lightGreen = 0xFF90EE90;
@@ -26,6 +30,8 @@ class ColrConstant {
   static const int lightBlack = 0xFF696969;
   static const int lightWhite = 0xFFFFF8F8;
   static const int lightTransparent = 0x00FFFFFF;
+  
+  // dark colors
   static const int darkBlue = 0xFF00008B;
   static const int darkRed = 0xFF8B0000;
   static const int darkGreen = 0xFF006400;
@@ -39,6 +45,8 @@ class ColrConstant {
   static const int darkBlack = 0xFF1E1E1E;
   static const int darkWhite = 0xFFDCDCDC;
   static const int darkTransparent = 0x00808080;
+  
+  // lightest colors
   static const int lightestBlue = 0xFFE0FFFF;
   static const int lightestRed = 0xFFFFF0F5;
   static const int lightestGreen = 0xFFF0FFF0;
@@ -52,6 +60,8 @@ class ColrConstant {
   static const int lightestBlack = 0xFF000000;
   static const int lightestWhite = 0xFFFFFFFF;
   static const int lightestTransparent = 0x00FFFFFF;
+  
+  // darkest colors
   static const int darkestBlue = 0xFF000080;
   static const int darkestRed = 0xFF8B0000;
   static const int darkestGreen = 0xFF006400;

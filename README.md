@@ -67,7 +67,7 @@ samples, guidance on mobile development, and a full API reference.
 
 
 ## Classes that we used
-# Any class will have a child object to proceed with
+## Any class will have a child object to proceed with
       - SingleChildScrollView : to make a page scrollable one
       - Scaffold : Becomes the root object for any page 
       - appbar, body, bottomnavigation
