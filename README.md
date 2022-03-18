@@ -68,30 +68,30 @@ It is the widget that can not be modified or manipulated at any cost and act as 
 
 ## Classes that we used
 Any class will have a child object to proceed with
-      - SingleChildScrollView - to make a page scrollable one
-      - Scaffold - Becomes the root object for any page 
+      - SingleChildScrollView : to make a page scrollable one
+      - Scaffold : Becomes the root object for any page 
       - appbar, body, bottomnavigation
-      - ClipOval - to create oval shaped object
-      - ClipRRect - rectangle object
-      - Row: Children[], mainAxis - horizontal & crossAxis
-      - Column: Children[], mainAxis - vertical & crossAxis - horizontal
+      - ClipOval : to create oval shaped object
+      - ClipRRect : rectangle object
+      - Row: Children[], mainAxis : horizontal & crossAxis
+      - Column: Children[], mainAxis : vertical & crossAxis - horizontal
       - MediaQuery : It will analyze the screen size (16:9, 20:9, 18:9)
-      - SafeArea - Instance to handle the device notch
-      - EdgeInsets - all(), only(), LTRB(): padding & margin
-      - TextFormField - controller to collect the form data & design
-      - InputDecoration - design pattern for the form class
-      - BoxDecoration - design pattern class for the container
-      - showSnackBar() - Provide the pop up alert on the screen
-      - TextSpan() - chldren objects, more than one text objects can be created
-      - Text() - single text string object can be added
-      - TextSpan - to add more text objects and make any text as actionable usinge TapGesture
-      - Padding - common Padding object for any child that we create
-      - Drawer - that helps to provide the side bar navigation
+      - SafeArea : Instance to handle the device notch
+      - EdgeInsets :all(), only(), LTRB(): padding & margin
+      - TextFormField : controller to collect the form data & design
+      - InputDecoration : design pattern for the form class
+      - BoxDecoration : design pattern class for the container
+      - showSnackBar() : Provide the pop up alert on the screen
+      - TextSpan() : chldren objects, more than one text objects can be created
+      - Text() : single text string object can be added
+      - TextSpan : to add more text objects and make any text as actionable usinge TapGesture
+      - Padding : common Padding object for any child that we create
+      - Drawer : that helps to provide the side bar navigation
             - UserAccountDetails
             - ListView: ListTile(icon, text, navigation)
-      - BottomNavigationBar - creates the bottom navigation
+      - BottomNavigationBar : creates the bottom navigation
             - Items (BottomNavigationBarItem)
-      - Carousel - creates list of sliding banners
+      - Carousel : creates list of sliding banners
       - AssetImage: Loads the local assets or loads iwithout internet
       - NetworkImages: load form the live URL
       - GridView.builder() to create list of images with even screen splitup to provide the gallery view
