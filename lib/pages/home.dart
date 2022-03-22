@@ -1,6 +1,8 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dealsapp/commonwidget/global_widget.dart';
+import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/util/notifyService.dart';
 // import 'package:dealsapp/values/sizes.dart';
 // import 'package:dealsapp/values/strings.dart';
 // import 'package:dealsapp/values/colors.dart';
@@ -8,7 +10,6 @@ import 'package:dealsapp/commonwidget/global_widget.dart';
 // import 'package:dealsapp/values/styles.dart';
 
 import 'package:dealsapp/values/values.dart';
-
 
 import 'package:flutter/material.dart';
 
@@ -24,6 +25,8 @@ class _HomeScreenState extends State<HomeScreen> {
   int selectedIndex = 0;
   int carouselIndex = 0;
   int carouselSliderIndex = 0;
+
+  NotificationService _notificationService = NotificationService();
 
   @override
   Widget build(BuildContext context) {
@@ -78,12 +81,18 @@ class _HomeScreenState extends State<HomeScreen> {
                   Navigator.of(context).pop();
                 },
               ),
-              ListTile(
-                leading: const Icon(Icons.settings),
-                title: const Text('Settings'),
+              InkWell(
                 onTap: () {
-                  Navigator.of(context).pop();
+                  // Use PushNamed Function of Navigator class to push the named route
+                  Navigator.pushNamed(context, 'login');
                 },
+                child: ListTile(
+                  leading: const Icon(Icons.cabin),
+                  title: const Text('Login'),
+                  onTap: () {
+                    Navigator.pushNamed(context, 'login');
+                  },
+                ),
               ),
               ListTile(
                 leading: const Icon(Icons.settings),
@@ -191,6 +200,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 16.0),
+
           CarouselSlider.builder(
             itemCount: 2,
             itemBuilder: (context, index, item) {
@@ -223,6 +233,33 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
+          const SizedBox(height: 10.0),
+                    const Padding(
+            padding: EdgeInsets.only(left: 16.0, right: 16.0),
+            child: Text(
+              'Top Brands',
+              style: TextStyle(
+                fontSize: 18.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          const SizedBox(height: 16.0),
+          Container(
+            height: 140.0,
+            width: double.infinity,
+            margin: const EdgeInsets.only(top: Sizes.SIZE_16),
+            child: ListView.builder(
+              itemBuilder: (BuildContext context, int index) {
+                return _topCatergories(context);
+              },
+              itemCount: 6,
+              scrollDirection: Axis.horizontal,
+            ),
+          ),
+          const SizedBox(height: 10.0),
+
+          
           const SizedBox(height: 10.0),
           const Padding(
             padding: EdgeInsets.only(left: 16.0, right: 16.0),
@@ -288,6 +325,39 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
+          const SizedBox(height: Sizes.HEIGHT_16),
+          
+        ],
+      ),
+    );
+  }
+
+  // Dynamic content screen
+  Widget _topCatergories(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.pushNamed(context, 'otpvalidation');
+      },
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10.0),
+              color: Colors.black,
+              image: const DecorationImage(
+                // image: AssetImage('assets/capsicum.jpg'),
+                image: NetworkImage(
+                  'https://rukminim2.flixcart.com/flap/844/140/image/8267b3004ba09766.jpg?q=50',
+                ),
+              ),
+            ),
+            alignment: Alignment.center,
+            width: 100.0,
+            height: 100.0,
+            margin: const EdgeInsets.symmetric(horizontal: Sizes.SIZE_16),
+          ),
+          const SizedBox(height: Sizes.HEIGHT_8),
+          
         ],
       ),
     );

@@ -5,13 +5,15 @@ import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
 import 'package:dealsapp/pages/tabview/tab_home.dart';
 import 'package:dealsapp/pages/widget/gesture_detector.dart';
-
+import 'package:dealsapp/util/notifyService.dart';
 import 'pages/splash.dart';
 import 'package:flutter/material.dart'; // building android layout
 // import 'package:flutter/cupertino.dart'; // for ios layout
 import 'package:hexcolor/hexcolor.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  NotificationService().init(); // invoke the constructor of the class
   runApp(MyApp());
 }
 
@@ -30,8 +32,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Deals App',
       theme: ThemeData(
-          primaryColor: _primaryColor,
-          primarySwatch: Colors.blue,
+        primaryColor: _primaryColor,
+        primarySwatch: Colors.blue,
         scaffoldBackgroundColor: _accentColor,
       ),
       debugShowCheckedModeBanner: true,
@@ -40,9 +42,38 @@ class MyApp extends StatelessWidget {
       // home: const ForgotPasswordScreen(),
       // home: const RegistrationScreen(),
       // home: const OTPVerificationScreen(),
-        // home: const HomeScreen(),
-        // home: const HomeTabBar()
-        home: const CardGestureWidget()
+      // home: const HomeScreen(),
+      // home: const HomeTabBar()
+      // home: const CardGestureWidget()
+      home: const PushNotifications(),
+      routes: {
+        'login': (context) => LoginScreen(),
+        'forgotpassword': (context) => ForgotPasswordScreen(),
+        'registration': (context) => RegistrationScreen(),
+        'otpvalidation': (context) => OTPVerificationScreen(),
+      },
+    );
+  }
+}
+
+class PushNotifications extends StatefulWidget {
+  const PushNotifications({Key? key}) : super(key: key);
+
+  @override
+  State<PushNotifications> createState() => _PushNotificationsState();
+}
+
+class _PushNotificationsState extends State<PushNotifications> {
+  NotificationService _notificationService = NotificationService();
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      child: ElevatedButton(
+        onPressed: () {
+          _notificationService.showNotification();
+        },
+        child: Text('Show Notification'),
+      ),
     );
   }
 }

@@ -96,6 +96,9 @@ samples, guidance on mobile development, and a full API reference.
       - NetworkImages: load form the live URL
       - GridView.builder() to create list of images with even screen splitup to provide the gallery view
       - SliverGridDelegateWithFixedCrossAxisCount fixed cross axis
+      - InkWell: will make any object as a actionable one
+      - Container : ListView.builder() creates dynamic list object on both symmetric
+      - routes in main.dart : sets the alias for all the classes (pages)
 
 
 ## Library
@@ -151,3 +154,9 @@ samples, guidance on mobile development, and a full API reference.
       - Final User End Testing
       - Long term feasibility & developer community
       - Source Updation, Platform, licencing model and other maintenance
+      - Future (async - will initiate function access cuncurrently, await will get the response until it will collect all the information)
+  
+## Notifications
+      - Live Push Notification (Firebase PN, OneSignal PN - SMS, PUSH, EMAIL)
+      - Local Push Notification 
+      - Scheduled Notifications

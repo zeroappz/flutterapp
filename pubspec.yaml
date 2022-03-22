@@ -21,6 +21,7 @@ dependencies:
   google_nav_bar: 
   flutter_staggered_grid_view: 
   awesome_drawer_bar: 
+  flutter_local_notifications: 
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +36,7 @@ flutter:
   assets:
     - assets/images/
     - assets/videos/
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
