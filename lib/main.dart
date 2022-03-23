@@ -4,6 +4,7 @@ import 'package:dealsapp/pages/login.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
 import 'package:dealsapp/pages/tabview/tab_home.dart';
+import 'package:dealsapp/pages/weather_report.dart';
 import 'package:dealsapp/pages/widget/gesture_detector.dart';
 import 'package:dealsapp/util/notifyService.dart';
 import 'pages/splash.dart';
@@ -45,7 +46,7 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       // home: const HomeTabBar()
       // home: const CardGestureWidget()
-      home: const PushNotifications(),
+      home: const WeatherReportScreen(),
       routes: {
         'login': (context) => LoginScreen(),
         'forgotpassword': (context) => ForgotPasswordScreen(),
@@ -63,16 +64,76 @@ class PushNotifications extends StatefulWidget {
   State<PushNotifications> createState() => _PushNotificationsState();
 }
 
+
 class _PushNotificationsState extends State<PushNotifications> {
   NotificationService _notificationService = NotificationService();
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: ElevatedButton(
-        onPressed: () {
-          _notificationService.showNotification();
-        },
-        child: Text('Show Notification'),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Notification Test'),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: const EdgeInsets.symmetric(vertical: 16.0, horizontal: 16.0),
+          child: Center(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                ElevatedButton(
+                  onPressed: () async {
+                    await _notificationService.showNotification();
+                  },
+                  child: const  Text('Show Notification'),
+                ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await _notificationService.showDynamicNotification(
+                        1,
+                        'Pongal Offer!',
+                        'Welcome to the Pongal Offers of Amazon!..');
+                  },
+                  child: const  Text('Dynamic Notification'),
+                ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await _notificationService.scheduledDynamicNotification(
+                        2,
+                        'Pongal Offer at Diwali Time!',
+                        'Welcome to the Pongal Offers of Amazon!..');
+                  },
+                  child: const  Text('Scheduled Dynamic'),
+                ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await _notificationService.cancelNotification(1);
+                  },
+                  child: const Text('Cancel Notification'),
+                ),
+                const SizedBox(
+                  height: 16.0,
+                ),
+                ElevatedButton(
+                  onPressed: () async {
+                    await _notificationService.cancelAllNotification();
+                  },
+                  child: Text('Cancel All'),
+                ),
+                SizedBox(height: 16.0),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }

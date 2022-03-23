@@ -22,6 +22,7 @@ dependencies:
   flutter_staggered_grid_view: 
   awesome_drawer_bar: 
   flutter_local_notifications: 
+  http: 0.13.4
 
 dev_dependencies:
   flutter_test:
