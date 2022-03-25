@@ -14,3 +14,6 @@ FLutter primary commands:
     13. pub global run rename --appname "Network Upp"
 	14. netsh wlan show profile name="wifi_name" key=clear
 	15. dart migrate --apply-changes
+
+
+rakeshkondamuri97@gmail.com - Pwd check

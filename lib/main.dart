@@ -1,6 +1,7 @@
 import 'package:dealsapp/pages/forgotpassword.dart';
 import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/pages/onboarding/onboarding_screen.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
 import 'package:dealsapp/pages/tabview/tab_home.dart';
@@ -46,12 +47,13 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       // home: const HomeTabBar()
       // home: const CardGestureWidget()
-      home: const WeatherReportScreen(),
+      home: OnBoardingScreen(),
+      // home: const WeatherReportScreen(),
       routes: {
-        'login': (context) => LoginScreen(),
-        'forgotpassword': (context) => ForgotPasswordScreen(),
-        'registration': (context) => RegistrationScreen(),
-        'otpvalidation': (context) => OTPVerificationScreen(),
+        'login': (context) => const LoginScreen(),
+        'forgotpassword': (context) => const ForgotPasswordScreen(),
+        'registration': (context) => const RegistrationScreen(),
+        'otpvalidation': (context) => const OTPVerificationScreen(),
       },
     );
   }

@@ -155,6 +155,7 @@ samples, guidance on mobile development, and a full API reference.
       - Long term feasibility & developer community
       - Source Updation, Platform, licencing model and other maintenance
       - Future (async - will initiate function access cuncurrently, await will get the response until it will collect all the information)
+      - PageView.builder() - create dynamic pages based on the list of data with static design pattern
   
 ## Notifications
       - Live Push Notification (Firebase PN, OneSignal PN - SMS, PUSH, EMAIL)
