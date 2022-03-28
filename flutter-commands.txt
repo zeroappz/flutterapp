@@ -16,4 +16,17 @@ FLutter primary commands:
 	15. dart migrate --apply-changes
 
 
-rakeshkondamuri97@gmail.com - Pwd check
+# flutter_colorpicker: ^1.0.3
+# flutter_circle_color_picker: ^0.3.0
+# flutter_neumorphic: ^3.0.3
+# auto_size_text: ^3.0.0
+
+
+SHA Key:
+
+cmd to generate SHA key: 
+keytool -list -v -keystore C:\Users\pravi\.android\debug.keystore -alias androiddebugkey -storepass android --keypass android
+
+
+	SHA1: CA:B7:56:70:58:04:2E:70:A5:56:5B:EA:0C:50:00:4C:DB:BC:B4:ED
+	SHA256: C6:6C:77:B5:E9:A1:EB:73:6F:AD:4E:C7:C8:94:BE:DD:62:A9:87:A0:A3:6E:C4:AB:26:7E:84:22:75:BD:B6:98

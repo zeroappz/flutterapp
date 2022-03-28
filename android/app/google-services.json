@@ -1,0 +1,40 @@
+{
+    "project_info": {
+        "project_number": "675021789942",
+        "project_id": "deals-app-sist",
+        "storage_bucket": "deals-app-sist.appspot.com"
+    },
+    "client": [{
+        "client_info": {
+            "mobilesdk_app_id": "1:675021789942:android:945c4f18829c5b1259aad7",
+            "android_client_info": {
+                "package_name": "com.algoxfusion.dealsapp"
+            }
+        },
+        "oauth_client": [{
+                "client_id": "675021789942-ecteis66inub2vo5kpdmocg1hvkme116.apps.googleusercontent.com",
+                "client_type": 1,
+                "android_info": {
+                    "package_name": "com.algoxfusion.dealsapp",
+                    "certificate_hash": "cab7567058042e70a5565bea0c50004cdbbcb4ed"
+                }
+            },
+            {
+                "client_id": "675021789942-3dit3ce6qr774hlnr877aoghn5ms023q.apps.googleusercontent.com",
+                "client_type": 3
+            }
+        ],
+        "api_key": [{
+            "current_key": "AIzaSyAUgY9Tjs-FWPBpXjosr9cD9bxJyNU0wds"
+        }],
+        "services": {
+            "appinvite_service": {
+                "other_platform_oauth_client": [{
+                    "client_id": "675021789942-3dit3ce6qr774hlnr877aoghn5ms023q.apps.googleusercontent.com",
+                    "client_type": 3
+                }]
+            }
+        }
+    }],
+    "configuration_version": "1"
+}

@@ -161,3 +161,23 @@ samples, guidance on mobile development, and a full API reference.
       - Live Push Notification (Firebase PN, OneSignal PN - SMS, PUSH, EMAIL)
       - Local Push Notification 
       - Scheduled Notifications
+
+
+## Setting Up Firebase
+      - [Firebase Console](https://console.firebase.google.com/)
+      - Login with Gmail ID for set up
+      - Create a new Project
+      - Step 1: Setting up your unique project
+      - Step 2: Add Analytics
+      - Step 3: It will creates new project
+## Register the Application
+      - Step 4: Choose the Project and add Android application
+      - Step 5: add bundleID, Appname, SHA_KEY exit
+      (SHA-1, SHA-256)
+      - Step 6: Download google-services.json and put it in app folder
+      - Step 7: Add the Firebase SDK to Android build.gradle (both Project & App level)
+      - Step 7: Include SHA1 & SHA256 Fingerprint Hash Algorithm's key in firebase
+
+## Register for Google API requests (such as Map, Direction, Places & more)
+      - [Register in this console](https://console.cloud.google.com/)
+      - Step 1: Enable the required API by choosing APIs and Services

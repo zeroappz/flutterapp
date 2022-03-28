@@ -1,14 +1,15 @@
 import 'package:dealsapp/pages/forgotpassword.dart';
-import 'package:dealsapp/pages/home.dart';
+// import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
 import 'package:dealsapp/pages/onboarding/onboarding_screen.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
-import 'package:dealsapp/pages/tabview/tab_home.dart';
-import 'package:dealsapp/pages/weather_report.dart';
-import 'package:dealsapp/pages/widget/gesture_detector.dart';
+// import 'package:dealsapp/pages/tabview/tab_home.dart';
+// import 'package:dealsapp/pages/weather_report.dart';
+// import 'package:dealsapp/pages/widget/gesture_detector.dart';
 import 'package:dealsapp/util/notifyService.dart';
-import 'pages/splash.dart';
+import 'package:flutter/services.dart';
+// import 'pages/splash.dart';
 import 'package:flutter/material.dart'; // building android layout
 // import 'package:flutter/cupertino.dart'; // for ios layout
 import 'package:hexcolor/hexcolor.dart';
@@ -16,7 +17,11 @@ import 'package:hexcolor/hexcolor.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   NotificationService().init(); // invoke the constructor of the class
-  runApp(MyApp());
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) => runApp(MyApp()));
+
+  SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky,
+      overlays: []);
 }
 
 class MyApp extends StatelessWidget {
@@ -38,7 +43,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         scaffoldBackgroundColor: _accentColor,
       ),
-      debugShowCheckedModeBanner: true,
+      debugShowCheckedModeBanner: false,
       // home: const SplashScreen(title: "Deals App"),
       // home: const LoginScreen(),
       // home: const ForgotPasswordScreen(),
@@ -47,8 +52,8 @@ class MyApp extends StatelessWidget {
       // home: const HomeScreen(),
       // home: const HomeTabBar()
       // home: const CardGestureWidget()
-      home: OnBoardingScreen(),
       // home: const WeatherReportScreen(),
+      home: const OnBoardingScreen(),
       routes: {
         'login': (context) => const LoginScreen(),
         'forgotpassword': (context) => const ForgotPasswordScreen(),
@@ -68,13 +73,13 @@ class PushNotifications extends StatefulWidget {
 
 
 class _PushNotificationsState extends State<PushNotifications> {
-  NotificationService _notificationService = NotificationService();
+  final NotificationService _notificationService = NotificationService();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Notification Test'),
+        title: const Text('Notification Test'),
       ),
       body: SingleChildScrollView(
         child: Container(
@@ -129,9 +134,9 @@ class _PushNotificationsState extends State<PushNotifications> {
                   onPressed: () async {
                     await _notificationService.cancelAllNotification();
                   },
-                  child: Text('Cancel All'),
+                  child: const Text('Cancel All'),
                 ),
-                SizedBox(height: 16.0),
+                const SizedBox(height: 16.0),
               ],
             ),
           ),
