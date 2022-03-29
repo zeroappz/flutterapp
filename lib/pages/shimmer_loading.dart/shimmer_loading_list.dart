@@ -1,5 +1,5 @@
 import 'package:dealsapp/commonwidget/global_widget.dart';
-import 'package:dealsapp/pages/shimmer_loading.dart/shimmer_1.dart';
+import 'package:dealsapp/pages/shimmer_loading.dart/shimmer_loading1.dart';
 import 'package:dealsapp/values/values.dart';
 import 'package:flutter/material.dart';
 
