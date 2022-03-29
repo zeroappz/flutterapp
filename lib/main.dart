@@ -1,9 +1,11 @@
 import 'package:dealsapp/pages/forgotpassword.dart';
 // import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/pages/map/map_view.dart';
 import 'package:dealsapp/pages/onboarding/onboarding_screen.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
+import 'package:dealsapp/pages/shimmer_loading.dart/shimmer_loading_list.dart';
 // import 'package:dealsapp/pages/tabview/tab_home.dart';
 // import 'package:dealsapp/pages/weather_report.dart';
 // import 'package:dealsapp/pages/widget/gesture_detector.dart';
@@ -53,7 +55,9 @@ class MyApp extends StatelessWidget {
       // home: const HomeTabBar()
       // home: const CardGestureWidget()
       // home: const WeatherReportScreen(),
-      home: const OnBoardingScreen(),
+      // home: const OnBoardingScreen(),
+      // home: const ShimmerLoadingListPage(),
+      home: const GoogleMapsListPage(),
       routes: {
         'login': (context) => const LoginScreen(),
         'forgotpassword': (context) => const ForgotPasswordScreen(),

@@ -23,6 +23,8 @@ dependencies:
   awesome_drawer_bar: 
   flutter_local_notifications: 
   http: 0.13.4
+  shimmer: ^2.0.0
+
 
 
 dev_dependencies:
