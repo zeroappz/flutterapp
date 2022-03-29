@@ -11,9 +11,9 @@ class _ShimmerLoading12PageState extends State<ShimmerLoading12Page> {
   // initialize global widget
   final _globalWidget = GlobalWidget();
 
-  double _containerHeight = 20;
-  double _spaceHeight = 10;
-  Color _shimmerColor = Colors.grey[200]!;
+  final double _containerHeight = 20;
+  final double _spaceHeight = 10;
+  final Color _shimmerColor = Colors.grey[200]!;
 
   @override
   void initState() {
@@ -33,7 +33,7 @@ class _ShimmerLoading12PageState extends State<ShimmerLoading12Page> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(16),
             child: _globalWidget.createDetailWidget(
                 title: 'Shimmer Loading 12',
                 description:
@@ -50,12 +50,12 @@ class _ShimmerLoading12PageState extends State<ShimmerLoading12Page> {
       child: Shimmer.fromColors(
         highlightColor: Colors.white,
         baseColor: _shimmerColor,
-        period: Duration(milliseconds: 1000),
+        period: const Duration(milliseconds: 1000),
         child: Container(
           child: Column(
             children: <Widget>[
               Container(
-                margin: EdgeInsets.symmetric(horizontal: 16),
+                margin: const EdgeInsets.symmetric(horizontal: 16),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,

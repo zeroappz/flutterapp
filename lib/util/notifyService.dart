@@ -19,19 +19,19 @@ class NotificationService {
 
   // General Setting for notification - Andorid, IOS, LINUX, MAC
   Future<dynamic> init() async {
-    final AndroidInitializationSettings initSettingsForAndroid =
-        AndroidInitializationSettings('@mipmap/ic_launcher');
+    AndroidInitializationSettings _initSettingsForAndroid =
+        const AndroidInitializationSettings('@mipmap/ic_launcher');
 
     // IOS notification settings
-    final IOSInitializationSettings initSettingsForIOS =
-        IOSInitializationSettings(
+    IOSInitializationSettings _initSettingsForIOS =
+        const IOSInitializationSettings(
             requestSoundPermission: true,
             requestAlertPermission: false,
             requestBadgePermission: false);
 
     final InitializationSettings initializationSettings =
         InitializationSettings(
-            android: initSettingsForAndroid, iOS: initSettingsForIOS);
+            android: _initSettingsForAndroid, iOS: _initSettingsForIOS);
 
     // load timezones
     tz.initializeTimeZones();
@@ -40,11 +40,12 @@ class NotificationService {
     await _flutterLocalNotificationPlugin.initialize(initializationSettings);
   }
 
-  AndroidNotificationDetails _androidNotificationDetails =
-      AndroidNotificationDetails('channelID', 'channelName',
+  final AndroidNotificationDetails _androidNotificationDetails =
+      const AndroidNotificationDetails('channelID', 'channelName',
           playSound: true, importance: Importance.high);
 
-  IOSNotificationDetails _iOSNotificationDetails = IOSNotificationDetails();
+  final IOSNotificationDetails _iOSNotificationDetails =
+      const IOSNotificationDetails();
 
   // In order to show notification in your app use this following function
   Future<void> showNotification() async {

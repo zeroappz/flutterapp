@@ -7,7 +7,7 @@ import 'dart:math';
 class GlobalWidget {
   // Global Alert Dialog Box
 
-  Random random = new Random();
+  Random random = Random();
 
   Color _getColor() {
     return Color.fromARGB(

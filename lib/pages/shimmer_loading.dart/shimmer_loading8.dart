@@ -11,8 +11,8 @@ class _ShimmerLoading8PageState extends State<ShimmerLoading8Page> {
   // initialize global widget
   final _globalWidget = GlobalWidget();
 
-  double _spaceHeight = 10;
-  Color _shimmerColor = Colors.grey[200]!;
+  final double _spaceHeight = 10;
+  final Color _shimmerColor = Colors.grey[200]!;
 
   @override
   void initState() {
@@ -32,7 +32,7 @@ class _ShimmerLoading8PageState extends State<ShimmerLoading8Page> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(16),
             child: _globalWidget.createDetailWidget(
                 title: 'Shimmer Loading 8',
                 description:
@@ -48,7 +48,7 @@ class _ShimmerLoading8PageState extends State<ShimmerLoading8Page> {
 
   Widget buildShimmerProduct(boxImageSize) {
     return GridView.count(
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
       primary: false,
       childAspectRatio: 5 / 8,
       shrinkWrap: true,
@@ -66,11 +66,11 @@ class _ShimmerLoading8PageState extends State<ShimmerLoading8Page> {
             child: Shimmer.fromColors(
               highlightColor: Colors.white,
               baseColor: _shimmerColor,
-              period: Duration(milliseconds: 1000),
+              period: const Duration(milliseconds: 1000),
               child: Column(
                 children: <Widget>[
                   ClipRRect(
-                    borderRadius: BorderRadius.only(
+                    borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(10),
                         topRight: Radius.circular(10)),
                     child: Container(
@@ -80,7 +80,7 @@ class _ShimmerLoading8PageState extends State<ShimmerLoading8Page> {
                     ),
                   ),
                   Container(
-                    margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                    margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,

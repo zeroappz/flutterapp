@@ -19,8 +19,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
   bool _dynamicTabActive = false;
   bool _sliverTabActive = false;
   int _selectedIndex = 0;
-  
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +31,6 @@ class _HomeTabBarState extends State<HomeTabBar> {
         centerTitle: true,
       ),
       backgroundColor: Colors.white,
-      
       body: Column(
         children: [
           Expanded(
@@ -52,7 +50,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
               ),
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.circular(Sizes.RADIUS_0),
+                borderRadius: BorderRadius.circular(Sizes.radius_0),
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -191,9 +189,9 @@ class _HomeTabBarState extends State<HomeTabBar> {
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(
           color: Colors.white,
-          // borderRadius: BorderRadius.only(
-          //   topLeft: Radius.circular(Sizes.RADIUS_0),
-          //   topRight: Radius.circular(Sizes.RADIUS_0),
+          // borderRadius: const BorderRadius.only(
+          //   topLeft: Radius.circular(Sizes.radius_0),
+          //   topRight: Radius.circular(Sizes.radius_0),
           // ),
           boxShadow: [
             BoxShadow(
@@ -221,7 +219,7 @@ class _HomeTabBarState extends State<HomeTabBar> {
               duration: const Duration(milliseconds: 400),
               tabBackgroundColor: Colors.grey[100]!,
               rippleColor: Colors.grey[300]!,
-              iconSize: Sizes.ICON_SIZE_24,
+              iconSize: Sizes.iconSize_24,
               tabs: const [
                 GButton(icon: Icons.home, text: StringConstant.HOME),
                 GButton(icon: Icons.search, text: StringConstant.SEARCH),

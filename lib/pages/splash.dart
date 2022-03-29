@@ -40,7 +40,7 @@ class _SplashScreenState extends State<SplashScreen> {
             end: Alignment.bottomRight,
             colors: [
               Theme.of(context).primaryColor,
-              Theme.of(context).accentColor
+              // // Theme.of(context).accentColor
             ],
             stops: const [0.0, 1.0],
             tileMode: TileMode.mirror),

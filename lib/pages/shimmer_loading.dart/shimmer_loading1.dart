@@ -1,6 +1,6 @@
 import 'package:dealsapp/commonwidget/global_widget.dart';
-import 'package:dealsapp/pages/login.dart';
-import 'package:dealsapp/values/values.dart';
+// import 'package:dealsapp/pages/login.dart';
+// import 'package:dealsapp/values/values.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -77,7 +77,7 @@ class _ShimmerLoadingPage1State extends State<ShimmerLoadingPage1> {
                         height: 120,
                         child: Container(
                           decoration: const BoxDecoration(
-                            borderRadius: BorderRadius.only(
+                            borderRadius: const BorderRadius.only(
                               topRight: Radius.circular(10.0),
                               bottomRight: Radius.circular(10.0),
                             ),
@@ -105,7 +105,7 @@ class _ShimmerLoadingPage1State extends State<ShimmerLoadingPage1> {
                               height: 20.0,
                               child: Container(
                                 decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     topRight: Radius.circular(10.0),
                                     bottomRight: Radius.circular(10.0),
                                   ),
@@ -126,7 +126,7 @@ class _ShimmerLoadingPage1State extends State<ShimmerLoadingPage1> {
                               width: MediaQuery.of(context).size.width * 0.3,
                               child: Container(
                                 decoration: const BoxDecoration(
-                                  borderRadius: BorderRadius.only(
+                                  borderRadius: const BorderRadius.only(
                                     topRight: Radius.circular(10.0),
                                     bottomRight: Radius.circular(10.0),
                                   ),

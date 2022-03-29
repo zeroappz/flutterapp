@@ -135,7 +135,6 @@ class StringConstant {
 
   // Login
   static const String LOGIN_DESCRIPTION = 'Login Description';
-  
 
   static const String IMG_TAG = 'Images';
   static const String GALLERY = 'Gallery';

@@ -19,13 +19,13 @@ class GeneralGridView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Container(
           // decoration: BoxDecoration(
-          //   borderRadius: BorderRadius.circular(Sizes.RADIUS_0),
+          //   borderRadius: BorderRadius.circular(Sizes.radius_0),
           //   image: DecorationImage(
           //     image: NetworkImage(_imgList[index]),
           //     fit: BoxFit.cover,
           //   ),
           // ),
-          height: Sizes.HEIGHT_10 * 10,
+          height: Sizes.height_10 * 10,
           margin: const EdgeInsets.only(top: 10.0),
           color: Colors.grey,
           child: GestureDetector(

@@ -11,9 +11,9 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
   // initialize global widget
   final _globalWidget = GlobalWidget();
 
-  double _spaceHeight = 10;
-  Color _shimmerColor = Colors.grey[200]!;
-  Color _shimmerColorDark = Colors.grey[500]!;
+  final double _spaceHeight = 10;
+  final Color _shimmerColor = Colors.grey[200]!;
+  final Color _shimmerColorDark = Colors.grey[500]!;
 
   @override
   void initState() {
@@ -34,7 +34,7 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(16),
             child: _globalWidget.createDetailWidget(
                 title: 'Shimmer Loading 4',
                 description:
@@ -51,7 +51,7 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
   Widget buildShimmerProductDiscount(boxImageSize) {
     return ListView.builder(
       itemCount: 8,
-      padding: EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return Container(
@@ -72,9 +72,9 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
                       Shimmer.fromColors(
                         highlightColor: Colors.white,
                         baseColor: _shimmerColor,
-                        period: Duration(milliseconds: 1000),
+                        period: const Duration(milliseconds: 1000),
                         child: ClipRRect(
-                          borderRadius: BorderRadius.only(
+                          borderRadius: const BorderRadius.only(
                               topLeft: Radius.circular(10),
                               topRight: Radius.circular(10)),
                           child: Container(
@@ -90,14 +90,14 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
                         child: Shimmer.fromColors(
                           highlightColor: Colors.white,
                           baseColor: _shimmerColorDark,
-                          period: Duration(milliseconds: 1000),
+                          period: const Duration(milliseconds: 1000),
                           child: Container(
                             decoration: BoxDecoration(
                                 color: _shimmerColorDark,
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                     topLeft: Radius.circular(6),
                                     bottomLeft: Radius.circular(6))),
-                            padding: EdgeInsets.fromLTRB(8, 4, 8, 4),
+                            padding: const EdgeInsets.fromLTRB(8, 4, 8, 4),
                             child: Container(
                               width: 20,
                               height: 12,
@@ -110,9 +110,9 @@ class _ShimmerLoading4PageState extends State<ShimmerLoading4Page> {
                   Shimmer.fromColors(
                     highlightColor: Colors.white,
                     baseColor: _shimmerColor,
-                    period: Duration(milliseconds: 1000),
+                    period: const Duration(milliseconds: 1000),
                     child: Container(
-                      margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                      margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,

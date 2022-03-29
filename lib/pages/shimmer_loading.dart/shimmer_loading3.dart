@@ -11,8 +11,8 @@ class _ShimmerLoading3PageState extends State<ShimmerLoading3Page> {
   // initialize global widget
   final _globalWidget = GlobalWidget();
 
-  double _spaceHeight = 10;
-  Color _shimmerColor = Colors.grey[200]!;
+  final double _spaceHeight = 10;
+  final Color _shimmerColor = Colors.grey[200]!;
 
   @override
   void initState() {
@@ -33,7 +33,7 @@ class _ShimmerLoading3PageState extends State<ShimmerLoading3Page> {
       body: ListView(
         children: [
           Container(
-            margin: EdgeInsets.all(16),
+            margin: const EdgeInsets.all(16),
             child: _globalWidget.createDetailWidget(
                 title: 'Shimmer Loading 3',
                 description:
@@ -50,7 +50,7 @@ class _ShimmerLoading3PageState extends State<ShimmerLoading3Page> {
   Widget buildShimmerHorizontalProduct(boxImageSize) {
     return ListView.builder(
       itemCount: 8,
-      padding: EdgeInsets.symmetric(horizontal: 12),
+      padding: const EdgeInsets.symmetric(horizontal: 12),
       scrollDirection: Axis.horizontal,
       itemBuilder: (BuildContext context, int index) {
         return Container(
@@ -64,14 +64,14 @@ class _ShimmerLoading3PageState extends State<ShimmerLoading3Page> {
             child: Shimmer.fromColors(
               highlightColor: Colors.white,
               baseColor: _shimmerColor,
-              period: Duration(milliseconds: 1000),
+              period: const Duration(milliseconds: 1000),
               child: Container(
                 width: boxImageSize,
                 height: boxImageSize,
                 child: Column(
                   children: <Widget>[
                     ClipRRect(
-                      borderRadius: BorderRadius.only(
+                      borderRadius: const BorderRadius.only(
                           topLeft: Radius.circular(10),
                           topRight: Radius.circular(10)),
                       child: Container(
@@ -81,7 +81,7 @@ class _ShimmerLoading3PageState extends State<ShimmerLoading3Page> {
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.fromLTRB(8, 8, 8, 8),
+                      margin: const EdgeInsets.fromLTRB(8, 8, 8, 8),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,

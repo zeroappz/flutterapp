@@ -1,8 +1,8 @@
 import 'package:carousel_pro/carousel_pro.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:dealsapp/commonwidget/global_widget.dart';
-import 'package:dealsapp/pages/login.dart';
-import 'package:dealsapp/util/notifyService.dart';
+// import 'package:dealsapp/pages/login.dart';
+// import 'package:dealsapp/util/notifyService.dart';
 // import 'package:dealsapp/values/sizes.dart';
 // import 'package:dealsapp/values/strings.dart';
 // import 'package:dealsapp/values/colors.dart';
@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
   int carouselIndex = 0;
   int carouselSliderIndex = 0;
 
-  NotificationService _notificationService = NotificationService();
+  // NotificationService _notificationService = NotificationService();
 
   @override
   Widget build(BuildContext context) {
@@ -234,7 +234,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
           const SizedBox(height: 10.0),
-                    const Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 16.0, right: 16.0),
             child: Text(
               'Top Brands',
@@ -259,7 +259,6 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           const SizedBox(height: 10.0),
 
-          
           const SizedBox(height: 10.0),
           const Padding(
             padding: EdgeInsets.only(left: 16.0, right: 16.0),
@@ -304,7 +303,7 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
           ),
-          const SizedBox(height: Sizes.HEIGHT_10),
+          const SizedBox(height: Sizes.height_10),
 
           // load an image and view it as a full screen on click of that image
           GestureDetector(
@@ -325,8 +324,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
           ),
 
-          const SizedBox(height: Sizes.HEIGHT_16),
-          
+          const SizedBox(height: Sizes.height_16),
         ],
       ),
     );
@@ -356,8 +354,7 @@ class _HomeScreenState extends State<HomeScreen> {
             height: 100.0,
             margin: const EdgeInsets.symmetric(horizontal: Sizes.SIZE_16),
           ),
-          const SizedBox(height: Sizes.HEIGHT_8),
-          
+          const SizedBox(height: Sizes.height_8),
         ],
       ),
     );

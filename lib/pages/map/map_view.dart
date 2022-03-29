@@ -693,7 +693,7 @@ class _GoogleMapsListPageState extends State<GoogleMapsListPage> {
             ),
           ),
           const SizedBox(
-            height: Sizes.HEIGHT_16,
+            height: Sizes.height_16,
           ),
           Container(
             child: const Text(
@@ -705,7 +705,7 @@ class _GoogleMapsListPageState extends State<GoogleMapsListPage> {
             ),
           ),
           const SizedBox(
-            height: Sizes.HEIGHT_16,
+            height: Sizes.height_16,
           ),
           _globalWidget.screenDetailList(
             context: context,

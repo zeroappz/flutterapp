@@ -1,5 +1,5 @@
 import 'package:dealsapp/commonwidget/global_widget.dart';
-import 'package:hexcolor/hexcolor.dart';
+// import 'package:hexcolor/hexcolor.dart';
 import 'onboarding_data.dart';
 import 'package:dealsapp/values/values.dart';
 import 'package:flutter/material.dart';
@@ -25,8 +25,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     return AnimatedContainer(
       duration: const Duration(milliseconds: 200),
       curve: Curves.easeIn,
-      height: Sizes.HEIGHT_10,
-      width: _currentPage == index ? Sizes.WIDTH_24 : Sizes.WIDTH_10,
+      height: Sizes.height_10,
+      width: _currentPage == index ? Sizes.width_24 : Sizes.width_10,
       decoration: BoxDecoration(
         color: Colors.black,
         borderRadius: BorderRadius.circular(Sizes.SIZE_48),
@@ -40,7 +40,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
     double width = SizeConfig.screenW!;
     double height = SizeConfig.screenH!;
     double blockH = SizeConfig.blockH!;
-    double blockV = SizeConfig.blockV!;
+    // double blockV = SizeConfig.blockV!;
 
     return Scaffold(
       backgroundColor: colors[_currentPage],
@@ -72,19 +72,19 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                             data[index].title,
                             // "Onboarding Screen 1 for DealsApp",
                             style: const TextStyle(
-                              fontSize: Sizes.TEXT_SIZE_24,
+                              fontSize: Sizes.textSize_24,
                               fontWeight: FontWeight.bold,
                               fontFamily: "Maiandra GD",
                             ),
                           ),
                           const SizedBox(
-                            height: Sizes.HEIGHT_16,
+                            height: Sizes.height_16,
                           ),
                           Text(
                             data[index].description,
                             // "Anyone can work on this app screens as it is much easier to work around",
                             style: const TextStyle(
-                              fontSize: Sizes.TEXT_SIZE_16,
+                              fontSize: Sizes.textSize_16,
                               fontWeight: FontWeight.normal,
                               fontFamily: "Maiandra GD",
                             ),
@@ -110,7 +110,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                   _currentPage + 1 == data.length
                       ? Padding(
-                          padding: const EdgeInsets.all(Sizes.RADIUS_24 + 6.0),
+                          padding: const EdgeInsets.all(Sizes.radius_24 + 6.0),
                           child: ElevatedButton(
                             onPressed: () {
                               Navigator.pushNamed(context, 'login');
@@ -119,7 +119,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                               'Get Started',
                               style: TextStyle(
                                 color: Colors.white,
-                                fontSize: Sizes.TEXT_SIZE_16,
+                                fontSize: Sizes.textSize_16,
                               ),
                             ),
                             style: ElevatedButton.styleFrom(
@@ -136,8 +136,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                       horizontal: width * 0.2, vertical: 24.0),
                               textStyle: TextStyle(
                                 fontSize: (width <= 550)
-                                    ? Sizes.TEXT_SIZE_12
-                                    : Sizes.TEXT_SIZE_16,
+                                    ? Sizes.textSize_12
+                                    : Sizes.textSize_16,
                               ),
                             ),
                           ),
@@ -164,8 +164,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                     fontWeight: FontWeight.w600,
                                     color: Colors.black,
                                     fontSize: (width <= 550)
-                                        ? Sizes.TEXT_SIZE_16
-                                        : Sizes.TEXT_SIZE_24,
+                                        ? Sizes.textSize_16
+                                        : Sizes.textSize_24,
                                   ),
                                 ),
                               ),
@@ -180,7 +180,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                   'Next',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: Sizes.TEXT_SIZE_16,
+                                    fontSize: Sizes.textSize_16,
                                   ),
                                 ),
                                 style: ElevatedButton.styleFrom(
@@ -197,8 +197,8 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                                           horizontal: 30.0, vertical: 24.0),
                                   textStyle: TextStyle(
                                     fontSize: (width <= 550)
-                                        ? Sizes.TEXT_SIZE_12
-                                        : Sizes.TEXT_SIZE_16,
+                                        ? Sizes.textSize_12
+                                        : Sizes.textSize_16,
                                   ),
                                 ),
                               ),

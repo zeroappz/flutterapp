@@ -32,7 +32,7 @@ class _FilterChipState extends State<FilterChipScreen> {
   final Set<String> _list = <String>{};
   final Set<String> _selectedFilter = <String>{};
 
-  _Filter_ChipState() {
+  _FilterChipState() {
     _list.clear();
     _list.addAll(_defaultListItem);
   }

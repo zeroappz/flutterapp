@@ -2,10 +2,10 @@ import 'package:dealsapp/pages/forgotpassword.dart';
 // import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
 import 'package:dealsapp/pages/map/map_view.dart';
-import 'package:dealsapp/pages/onboarding/onboarding_screen.dart';
+// import 'package:dealsapp/pages/onboarding/onboarding_screen.dart';
 import 'package:dealsapp/pages/otp_validation.dart';
 import 'package:dealsapp/pages/registration.dart';
-import 'package:dealsapp/pages/shimmer_loading.dart/shimmer_loading_list.dart';
+// import 'package:dealsapp/pages/shimmer_loading.dart/shimmer_loading_list.dart';
 // import 'package:dealsapp/pages/tabview/tab_home.dart';
 // import 'package:dealsapp/pages/weather_report.dart';
 // import 'package:dealsapp/pages/widget/gesture_detector.dart';
@@ -75,7 +75,6 @@ class PushNotifications extends StatefulWidget {
   State<PushNotifications> createState() => _PushNotificationsState();
 }
 
-
 class _PushNotificationsState extends State<PushNotifications> {
   final NotificationService _notificationService = NotificationService();
 
@@ -96,7 +95,7 @@ class _PushNotificationsState extends State<PushNotifications> {
                   onPressed: () async {
                     await _notificationService.showNotification();
                   },
-                  child: const  Text('Show Notification'),
+                  child: const Text('Show Notification'),
                 ),
                 const SizedBox(
                   height: 16.0,
@@ -108,7 +107,7 @@ class _PushNotificationsState extends State<PushNotifications> {
                         'Pongal Offer!',
                         'Welcome to the Pongal Offers of Amazon!..');
                   },
-                  child: const  Text('Dynamic Notification'),
+                  child: const Text('Dynamic Notification'),
                 ),
                 const SizedBox(
                   height: 16.0,
@@ -120,7 +119,7 @@ class _PushNotificationsState extends State<PushNotifications> {
                         'Pongal Offer at Diwali Time!',
                         'Welcome to the Pongal Offers of Amazon!..');
                   },
-                  child: const  Text('Scheduled Dynamic'),
+                  child: const Text('Scheduled Dynamic'),
                 ),
                 const SizedBox(
                   height: 16.0,

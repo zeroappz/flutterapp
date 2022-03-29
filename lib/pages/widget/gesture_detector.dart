@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:dealsapp/commonwidget/global_widget.dart';
+// import 'package:dealsapp/commonwidget/global_widget.dart';
 import 'package:dealsapp/values/values.dart';
 import 'package:flutter/material.dart';
 
@@ -66,7 +66,7 @@ class _CardGestureWidgetState extends State<CardGestureWidget> {
               shape: makeCircular == true
                   ? CircleBorder(side: BorderSide(color: _color, width: 2.0))
                   : RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(Sizes.RADIUS_8),
+                      borderRadius: BorderRadius.circular(Sizes.radius_8),
                     ),
             ),
           ),
