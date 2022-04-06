@@ -79,7 +79,7 @@ class GlobalWidget {
     return AppBar(
       backgroundColor: Colors.white,
       title: const Text(
-        'AlgoxFusion',
+        "Trym'd",
         style: TextStyle(
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
@@ -245,6 +245,39 @@ class GlobalWidget {
           offset: const Offset(0, 10),
         ),
       ],
+    );
+  }
+
+  Widget createButton(
+      {Color backgroundColor = Colors.blue,
+      Color textColor = Colors.white,
+      required String buttonName,
+      required Function onPressed}) {
+    return TextButton(
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith(
+          (states) => backgroundColor,
+        ),
+        overlayColor: MaterialStateProperty.all(Colors.transparent),
+        shape: MaterialStateProperty.all(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(12),
+          ),
+        ),
+      ),
+      onPressed: onPressed as void Function(),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: Sizes.SIZE_10),
+        child: Text(
+          buttonName,
+          style: TextStyle(
+            color: textColor,
+            fontSize: Sizes.SIZE_24,
+            fontWeight: FontWeight.bold,
+          ),
+          textAlign: TextAlign.center,
+        ),
+      ),
     );
   }
 }

@@ -1,3 +1,4 @@
+import 'package:dealsapp/pages/firebase/firebase_list.dart';
 import 'package:dealsapp/pages/forgotpassword.dart';
 // import 'package:dealsapp/pages/home.dart';
 import 'package:dealsapp/pages/login.dart';
@@ -57,7 +58,8 @@ class MyApp extends StatelessWidget {
       // home: const WeatherReportScreen(),
       // home: const OnBoardingScreen(),
       // home: const ShimmerLoadingListPage(),
-      home: const GoogleMapsListPage(),
+      // home: const GoogleMapsListPage(),
+      home: FirebaseAuthenticationsListPage(),
       routes: {
         'login': (context) => const LoginScreen(),
         'forgotpassword': (context) => const ForgotPasswordScreen(),
