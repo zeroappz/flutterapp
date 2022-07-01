@@ -75,4 +75,5 @@ class ColorConstants {
   static const int darkestBlack = 0xFF1E1E1E;
   static const int darkestWhite = 0xFFDCDCDC;
   static const int darkestTransparent = 0x00808080;
+
 }
