@@ -1,5 +1,6 @@
 import 'package:dealsapp/pages/firebase/auth_anonymous.dart';
 import 'package:dealsapp/pages/login.dart';
+import 'package:dealsapp/pages/model_api_call.dart';
 import 'package:dealsapp/pages/time_fetch.dart';
 import 'package:dealsapp/values/values.dart';
 
@@ -96,6 +97,11 @@ class _FirebaseAuthenticationsListPageState
             context: context,
             title: 'Email / Password Method',
             page: const LoginScreen(),
+          ),
+          _globalWidget.screenDetailList(
+            context: context,
+            title: 'MVC Data Access',
+            page: const MVSAccess(),
           ),
           _globalWidget.screenDetailList(
             context: context,
